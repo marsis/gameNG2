@@ -1,0 +1,9 @@
+<h1>Find two identical pictures</h1>
+<h3>You have {{life}} attempts</h3>
+<div class ="win" *ngIf="life === 0"><img src='https://marsis.github.io/pikchers/gameover.jpg'></div>
+<div class ="win" *ngIf="(life > 0 && counter ==12)"><img src='https://marsis.github.io/pikchers/winner.jpg'></div>
+<div class="button" *ngIf="(life === 0) || (life > 0 && counter ==12)" (click)="newGame()">Try again?</div>
+<div class="block-container" *ngIf="life !=0">
+  <block (remove)="destroy($event.item)" [item]="item" *ngFor="let item of list"></block>
+</div>
+

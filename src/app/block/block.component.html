@@ -1,0 +1,3 @@
+<div *ngIf="item.isOpen"  [ngStyle]="{'background-image': 'url(' + item.color + ')'}" (click)="openCard()" [ngClass]="{opacity: item.pair}" class="block">
+</div>
+<div *ngIf ="!item.isOpen" [ngStyle]="{'background-image': 'url(https://marsis.github.io/pikchers/fond.jpg)'}" (click)="openCard()" class="block">{{sign}}</div>
